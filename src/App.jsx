@@ -4,7 +4,7 @@ function App() {
       icon: "🔍",
       name: "WikiAI Search",
       description: "Search anything on Wikipedia — AI organizes it into beautiful insights, videos and related articles.",
-      link: "http://localhost:5173",
+      link: "https://wikiai-wine.vercel.app",
       status: "live",
       color: "#667eea"
     },
