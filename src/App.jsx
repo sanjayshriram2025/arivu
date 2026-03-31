@@ -3,179 +3,228 @@ function App() {
     {
       icon: "🔍",
       name: "WikiAI Search",
-      description: "Search anything on Wikipedia — AI organizes it into beautiful insights, videos and related articles.",
+      description: "Search anything on Wikipedia — AI organizes it into beautiful insights with YouTube videos and related articles.",
       link: "https://wikiai-wine.vercel.app",
       status: "live",
-      color: "#667eea"
+      color: "#667eea",
+      glow: "rgba(102,126,234,0.15)",
+      border: "rgba(102,126,234,0.3)"
     },
     {
       icon: "📝",
       name: "Study Notes Generator",
-      description: "Paste any text and AI generates beautiful structured study notes instantly.",
+      description: "Paste any text and AI generates beautiful structured study notes instantly — perfect for students.",
       link: "#",
       status: "coming",
-      color: "#43e97b"
+      color: "#43e97b",
+      glow: "rgba(67,233,123,0.15)",
+      border: "rgba(67,233,123,0.3)"
     },
     {
       icon: "🏥",
       name: "Health Assistant",
-      description: "Get quick information about symptoms, medicines and healthy living tips.",
+      description: "Get quick information about symptoms, medicines and healthy living tips — in simple language.",
       link: "#",
       status: "coming",
-      color: "#f093fb"
+      color: "#f093fb",
+      glow: "rgba(240,147,251,0.15)",
+      border: "rgba(240,147,251,0.3)"
     },
     {
       icon: "💼",
       name: "Resume Builder",
-      description: "Build a professional resume with AI in minutes — completely free.",
+      description: "Build a professional resume with AI in minutes — completely free, no templates needed.",
       link: "#",
       status: "coming",
-      color: "#ffd700"
+      color: "#ffd700",
+      glow: "rgba(255,215,0,0.15)",
+      border: "rgba(255,215,0,0.3)"
     },
     {
       icon: "🌾",
       name: "Government Scheme Finder",
-      description: "Find all government schemes you are eligible for — in your language.",
+      description: "Find all government schemes you are eligible for — in your language, instantly.",
       link: "#",
       status: "coming",
-      color: "#ff6b6b"
+      color: "#ff6b6b",
+      glow: "rgba(255,107,107,0.15)",
+      border: "rgba(255,107,107,0.3)"
     },
     {
       icon: "📰",
       name: "News Summarizer",
-      description: "Get today's top news summarized in simple, easy to understand language.",
+      description: "Get today's top news summarized in simple, easy to understand language — stay informed!",
       link: "#",
       status: "coming",
-      color: "#43b89c"
+      color: "#43b89c",
+      glow: "rgba(67,184,156,0.15)",
+      border: "rgba(67,184,156,0.3)"
     },
   ];
 
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(135deg, #0f0c29, #302b63, #24243e)",
+      background: "#050510",
       fontFamily: "'Segoe UI', sans-serif",
+      color: "white",
+      overflowX: "hidden"
     }}>
+
+      {/* Background glows */}
+      <div style={{
+        position: "fixed", top: 0, left: 0,
+        width: "100%", height: "100%", zIndex: 0,
+        background: "radial-gradient(ellipse at 20% 50%, rgba(102,126,234,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(240,147,251,0.1) 0%, transparent 60%)"
+      }} />
 
       {/* Header */}
       <div style={{
-        background: "rgba(255,255,255,0.05)",
-        backdropFilter: "blur(10px)",
-        borderBottom: "1px solid rgba(255,255,255,0.1)",
-        padding: "20px 40px",
+        position: "relative", zIndex: 10,
         display: "flex", alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        padding: "20px 40px",
+        borderBottom: "1px solid rgba(255,255,255,0.06)"
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           <div style={{
-            width: "40px", height: "40px",
+            width: "44px", height: "44px",
             background: "linear-gradient(135deg, #667eea, #764ba2)",
-            borderRadius: "12px", display: "flex",
+            borderRadius: "14px", display: "flex",
             alignItems: "center", justifyContent: "center",
-            fontSize: "20px"
+            fontSize: "22px",
+            boxShadow: "0 4px 20px rgba(102,126,234,0.4)"
           }}>✨</div>
-          <span style={{
-            fontSize: "22px", fontWeight: "800",
-            background: "linear-gradient(135deg, #667eea, #f093fb)",
-            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"
-          }}>Arivu AI</span>
+          <div>
+            <div style={{
+              fontSize: "24px", fontWeight: "800",
+              background: "linear-gradient(135deg, #667eea, #f093fb)",
+              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"
+            }}>Arivu AI</div>
+            <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.3)", marginTop: "2px" }}>
+              அறிவு — Knowledge
+            </div>
+          </div>
         </div>
-        <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "13px" }}>
-          அறிவு — Knowledge for all
-        </span>
+        <div style={{
+          background: "rgba(102,126,234,0.15)",
+          border: "1px solid rgba(102,126,234,0.3)",
+          borderRadius: "20px", padding: "6px 16px",
+          color: "#a78bfa", fontSize: "12px", fontWeight: "600"
+        }}>🆓 Free Forever</div>
       </div>
 
       {/* Hero */}
-      <div style={{ textAlign: "center", padding: "80px 20px 60px" }}>
+      <div style={{ position: "relative", zIndex: 10, textAlign: "center", padding: "80px 20px 60px" }}>
         <div style={{
           display: "inline-block",
-          background: "rgba(102,126,234,0.15)",
-          border: "1px solid rgba(102,126,234,0.3)",
-          borderRadius: "20px", padding: "6px 20px",
-          color: "#a78bfa", fontSize: "13px",
-          fontWeight: "600", marginBottom: "24px"
+          background: "rgba(67,233,123,0.1)",
+          border: "1px solid rgba(67,233,123,0.3)",
+          borderRadius: "20px", padding: "8px 20px",
+          color: "#43e97b", fontSize: "13px",
+          fontWeight: "600", marginBottom: "28px"
         }}>
-          🆓 100% Free · No Login Required
+          ✨ Built by a CSE Student from Tamil Nadu
         </div>
         <h1 style={{
-          fontSize: "60px", fontWeight: "900", margin: "0 0 20px",
-          background: "linear-gradient(135deg, #fff 0%, #a78bfa 50%, #f093fb 100%)",
-          WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-          lineHeight: 1.1
+          fontSize: "58px", fontWeight: "800",
+          lineHeight: 1.1, margin: "0 0 20px"
         }}>
-          Free AI Tools<br/>For Everyone
+          Free AI Tools<br/>
+          <span style={{
+            background: "linear-gradient(135deg, #667eea, #f093fb)",
+            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"
+          }}>For Everyone</span>
         </h1>
         <p style={{
-          color: "rgba(255,255,255,0.5)", fontSize: "20px",
-          margin: "0 0 16px", maxWidth: "600px", marginLeft: "auto", marginRight: "auto"
+          color: "rgba(255,255,255,0.5)", fontSize: "18px",
+          maxWidth: "520px", margin: "0 auto 12px", lineHeight: 1.7
         }}>
-          Powerful AI tools built for students, professionals and everyone in between.
+          Powerful AI tools built for students, professionals and everyone — completely free, no login required.
         </p>
-        <p style={{
-          color: "rgba(255,255,255,0.3)", fontSize: "15px", margin: 0
-        }}>
-          Built with ❤️ by Sanjay Shriram — A CSE student from Tamil Nadu
+        <p style={{ color: "rgba(255,255,255,0.25)", fontSize: "14px", marginBottom: "48px" }}>
+          அறிவே வல்லமை — Knowledge is Power
         </p>
+
+        {/* Stats */}
+        <div style={{ display: "flex", gap: "48px", justifyContent: "center", marginBottom: "60px" }}>
+          {[["6+", "AI Tools"], ["100%", "Free Forever"], ["∞", "Searches"]].map(([num, label], i) => (
+            <div key={i} style={{ textAlign: "center" }}>
+              <div style={{
+                fontSize: "32px", fontWeight: "800",
+                background: "linear-gradient(135deg, #667eea, #f093fb)",
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"
+              }}>{num}</div>
+              <div style={{ color: "rgba(255,255,255,0.3)", fontSize: "12px", marginTop: "4px" }}>{label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Tools Grid */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px 80px" }}>
-        <h2 style={{
-          color: "white", fontWeight: "800", fontSize: "28px",
-          marginBottom: "32px", textAlign: "center"
-        }}>
-          🛠️ Our Tools
-        </h2>
+      <div style={{ position: "relative", zIndex: 10, maxWidth: "1100px", margin: "0 auto", padding: "0 20px 80px" }}>
+        <p style={{
+          textAlign: "center", fontSize: "13px",
+          fontWeight: "600", color: "rgba(255,255,255,0.3)",
+          letterSpacing: "2px", textTransform: "uppercase",
+          marginBottom: "40px"
+        }}>Our Tools</p>
 
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "24px"
+          gap: "20px"
         }}>
           {tools.map((tool, i) => (
             <div key={i} style={{
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: "20px", padding: "28px",
-              transition: "transform 0.2s",
-              position: "relative", overflow: "hidden"
+              background: "rgba(255,255,255,0.03)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "24px", padding: "28px",
+              transition: "all 0.3s", position: "relative",
+              overflow: "hidden"
             }}
-              onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
-              onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.15)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.03)";
+              }}
             >
-              {/* Status badge */}
+              {/* Glow */}
               <div style={{
-                position: "absolute", top: "20px", right: "20px",
-                background: tool.status === "live" ? "rgba(67,233,123,0.15)" : "rgba(255,255,255,0.08)",
-                border: tool.status === "live" ? "1px solid rgba(67,233,123,0.4)" : "1px solid rgba(255,255,255,0.15)",
-                borderRadius: "20px", padding: "4px 12px",
-                color: tool.status === "live" ? "#43e97b" : "rgba(255,255,255,0.4)",
-                fontSize: "12px", fontWeight: "600"
-              }}>
-                {tool.status === "live" ? "✅ Live" : "🔜 Coming Soon"}
+                position: "absolute", top: "-40px", right: "-40px",
+                width: "120px", height: "120px", borderRadius: "50%",
+                background: tool.color, opacity: 0.15, filter: "blur(30px)"
+              }} />
+
+              {/* Top row */}
+              <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "20px" }}>
+                <div style={{
+                  width: "52px", height: "52px", borderRadius: "16px",
+                  background: tool.glow, border: "1px solid " + tool.border,
+                  display: "flex", alignItems: "center",
+                  justifyContent: "center", fontSize: "26px"
+                }}>{tool.icon}</div>
+                <div style={{
+                  background: tool.status === "live" ? "rgba(67,233,123,0.15)" : "rgba(255,255,255,0.05)",
+                  border: tool.status === "live" ? "1px solid rgba(67,233,123,0.3)" : "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: "20px", padding: "4px 12px",
+                  color: tool.status === "live" ? "#43e97b" : "rgba(255,255,255,0.3)",
+                  fontSize: "11px", fontWeight: "700"
+                }}>
+                  {tool.status === "live" ? "✅ Live Now" : "🔜 Coming Soon"}
+                </div>
               </div>
 
-              {/* Icon */}
-              <div style={{
-                width: "56px", height: "56px",
-                background: tool.color + "22",
-                border: "1px solid " + tool.color + "44",
-                borderRadius: "16px", display: "flex",
-                alignItems: "center", justifyContent: "center",
-                fontSize: "28px", marginBottom: "16px"
-              }}>
-                {tool.icon}
-              </div>
-
-              {/* Content */}
-              <h3 style={{ color: "white", fontWeight: "800", fontSize: "20px", marginBottom: "10px" }}>
-                {tool.name}
-              </h3>
-              <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "14px", lineHeight: "1.7", marginBottom: "20px" }}>
+              <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "10px" }}>{tool.name}</h3>
+              <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "14px", lineHeight: 1.7, marginBottom: "24px" }}>
                 {tool.description}
               </p>
 
-              {/* Button */}
               {tool.status === "live" ? (
                 <button
                   onClick={() => window.open(tool.link, "_blank")}
@@ -183,23 +232,17 @@ function App() {
                     background: "linear-gradient(135deg, #667eea, #764ba2)",
                     border: "none", borderRadius: "12px",
                     padding: "10px 24px", color: "white",
-                    fontWeight: "700", fontSize: "14px",
-                    cursor: "pointer"
+                    fontWeight: "700", fontSize: "14px", cursor: "pointer"
                   }}
-                >
-                  Open Tool →
-                </button>
+                >Open Tool →</button>
               ) : (
                 <button style={{
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.15)",
+                  background: "transparent",
+                  border: "1px solid rgba(255,255,255,0.1)",
                   borderRadius: "12px", padding: "10px 24px",
-                  color: "rgba(255,255,255,0.3)",
-                  fontWeight: "700", fontSize: "14px",
-                  cursor: "not-allowed"
-                }}>
-                  Coming Soon
-                </button>
+                  color: "rgba(255,255,255,0.25)",
+                  fontWeight: "600", fontSize: "14px", cursor: "not-allowed"
+                }}>Coming Soon</button>
               )}
             </div>
           ))}
@@ -208,22 +251,23 @@ function App() {
 
       {/* Footer */}
       <div style={{
-        background: "rgba(255,255,255,0.03)",
-        borderTop: "1px solid rgba(255,255,255,0.08)",
+        position: "relative", zIndex: 10,
+        borderTop: "1px solid rgba(255,255,255,0.06)",
         padding: "40px", textAlign: "center"
       }}>
-        <p style={{
+        <div style={{
+          fontSize: "22px", fontWeight: "800",
           background: "linear-gradient(135deg, #667eea, #f093fb)",
           WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-          fontWeight: "800", fontSize: "24px", margin: "0 0 12px"
-        }}>Arivu AI</p>
-        <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "14px", margin: "0 0 8px" }}>
+          marginBottom: "8px"
+        }}>Arivu AI</div>
+        <p style={{ color: "rgba(255,255,255,0.25)", fontSize: "13px", marginBottom: "6px" }}>
           அறிவு — Knowledge for all
         </p>
-        <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "13px", margin: "0 0 8px" }}>
-          Built with ❤️ by Sanjay Shriram — 2nd Year CSE Student, Tamil Nadu
+        <p style={{ color: "rgba(255,255,255,0.25)", fontSize: "13px", marginBottom: "6px" }}>
+          Built with ❤️ by Sanjay Shriram 
         </p>
-        <p style={{ color: "rgba(255,255,255,0.2)", fontSize: "12px", margin: 0 }}>
+        <p style={{ color: "rgba(255,255,255,0.15)", fontSize: "12px" }}>
           © 2026 Arivu AI. All tools are free forever.
         </p>
       </div>
