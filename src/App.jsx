@@ -14,8 +14,8 @@ function App() {
       icon: "📝",
       name: "Study Notes Generator",
       description: "Paste any text and AI generates beautiful structured study notes instantly — perfect for students.",
-      link: "#",
-      status: "coming",
+      link: "https://study-notes-inky.vercel.app",
+      status: "live",
       color: "#43e97b",
       glow: "rgba(67,233,123,0.15)",
       border: "rgba(67,233,123,0.3)"
